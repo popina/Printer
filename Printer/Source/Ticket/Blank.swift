@@ -12,4 +12,8 @@ struct Blank: BlockDataProvider {
     func data(using encoding: String.Encoding) -> Data {
         return Data()
     }
+    
+    func attributedString() -> NSAttributedString {
+        return NSAttributedString(string: "")
+    }
 }

@@ -12,13 +12,18 @@ public protocol Printable {
     func data(using encoding: String.Encoding) -> Data
 }
 
-public protocol BlockDataProvider: Printable { }
+public protocol Textable {
+    func attributedString() -> NSAttributedString
+}
+
+public protocol BlockDataProvider: Printable, Textable { }
 
 public protocol Attribute {
     var attribute: [UInt8] { get }
+    var attributeString: [NSAttributedString.Key: Any]? { get }
 }
 
-public struct Block: Printable {
+public struct Block: Printable, Textable {
 
     public static var defaultFeedPoints: UInt8 = 70
     
@@ -32,6 +37,10 @@ public struct Block: Printable {
     
     public func data(using encoding: String.Encoding) -> Data {
         return dataProvider.data(using: encoding) + Data.print(feedPoints)
+    }
+    
+    public func attributedString() -> NSAttributedString {
+        return dataProvider.attributedString()
     }
 }
 

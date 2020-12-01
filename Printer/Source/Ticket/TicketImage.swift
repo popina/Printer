@@ -30,6 +30,10 @@ public struct TicketImage: BlockDataProvider {
         
         return result
     }
+    
+    public func attributedString() -> NSAttributedString {
+        return NSAttributedString(string: "[IMAGE]")
+    }
 }
 
 public extension TicketImage {
@@ -43,6 +47,10 @@ public extension TicketImage {
             case let .alignment(v):
                 return ESC_POSCommand.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
             }
+        }
+        
+        public var attributeString: [NSAttributedString.Key : Any]? {
+            return nil
         }
     }
     

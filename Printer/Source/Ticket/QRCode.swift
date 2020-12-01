@@ -32,4 +32,8 @@ struct QRCode: BlockDataProvider {
         
         return result
     }
+    
+    public func attributedString() -> NSAttributedString {
+        return NSAttributedString(string: "[QR]\(content)[/QR]")
+    }
 }

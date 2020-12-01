@@ -37,5 +37,13 @@ public struct Dividing: BlockDataProvider {
         
         return Text(content).data(using: encoding)
     }
+    
+    public func attributedString() -> NSAttributedString {
+        let num = printDensity / fontDensity
+        
+        let content = stride(from: 0, to: num, by: 1).map { String(provider.character(for: $0, total: num) ) }.joined()
+
+        return NSAttributedString(string: content)
+    }
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A7713091DF905AE0009867F /* Printer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7712FB1DF905AE0009867F /* Printer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D5C3F3725768B2100ED7052 /* PrinterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C3F3625768B2100ED7052 /* PrinterTests.swift */; };
+		2D5C3F3925768B2100ED7052 /* Printer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7712F81DF905AE0009867F /* Printer.framework */; };
 		5BD9B60222EE1B4900174ABA /* DummyPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9B5ED22EE1B4900174ABA /* DummyPrinter.swift */; };
 		5BD9B60322EE1B4900174ABA /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9B5EF22EE1B4900174ABA /* Todo.swift */; };
 		5BD9B60422EE1B4900174ABA /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9B5F122EE1B4900174ABA /* BluetoothPrinterSelectTableViewController.swift */; };
@@ -27,10 +29,23 @@
 		5BD9B61222EE1B4900174ABA /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9B60122EE1B4900174ABA /* Text.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D5C3F3A25768B2100ED7052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A7712EF1DF905AE0009867F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A7712F71DF905AE0009867F;
+			remoteInfo = Printer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0A7712F81DF905AE0009867F /* Printer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Printer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7712FB1DF905AE0009867F /* Printer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Printer.h; sourceTree = "<group>"; };
 		0A7712FC1DF905AE0009867F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5C3F3425768B2100ED7052 /* PrinterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrinterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5C3F3625768B2100ED7052 /* PrinterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterTests.swift; sourceTree = "<group>"; };
+		2D5C3F3825768B2100ED7052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BD9B5ED22EE1B4900174ABA /* DummyPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyPrinter.swift; sourceTree = "<group>"; };
 		5BD9B5EF22EE1B4900174ABA /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5BD9B5F122EE1B4900174ABA /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +73,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D5C3F3125768B2100ED7052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5C3F3925768B2100ED7052 /* Printer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0A7712FA1DF905AE0009867F /* Printer */,
+				2D5C3F3525768B2100ED7052 /* PrinterTests */,
 				0A7712F91DF905AE0009867F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0A7712F81DF905AE0009867F /* Printer.framework */,
+				2D5C3F3425768B2100ED7052 /* PrinterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +110,15 @@
 				0A7712FC1DF905AE0009867F /* Info.plist */,
 			);
 			path = Printer;
+			sourceTree = "<group>";
+		};
+		2D5C3F3525768B2100ED7052 /* PrinterTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C3F3625768B2100ED7052 /* PrinterTests.swift */,
+				2D5C3F3825768B2100ED7052 /* Info.plist */,
+			);
+			path = PrinterTests;
 			sourceTree = "<group>";
 		};
 		5BD9B5EA22EE1B4900174ABA /* Source */ = {
@@ -215,20 +249,42 @@
 			productReference = 0A7712F81DF905AE0009867F /* Printer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2D5C3F3325768B2100ED7052 /* PrinterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5C3F3E25768B2100ED7052 /* Build configuration list for PBXNativeTarget "PrinterTests" */;
+			buildPhases = (
+				2D5C3F3025768B2100ED7052 /* Sources */,
+				2D5C3F3125768B2100ED7052 /* Frameworks */,
+				2D5C3F3225768B2100ED7052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D5C3F3B25768B2100ED7052 /* PBXTargetDependency */,
+			);
+			name = PrinterTests;
+			productName = PrinterTests;
+			productReference = 2D5C3F3425768B2100ED7052 /* PrinterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0A7712EF1DF905AE0009867F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Kevin;
 				TargetAttributes = {
 					0A7712F71DF905AE0009867F = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
+					};
+					2D5C3F3325768B2100ED7052 = {
+						CreatedOnToolsVersion = 12.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -246,12 +302,20 @@
 			projectRoot = "";
 			targets = (
 				0A7712F71DF905AE0009867F /* Printer */,
+				2D5C3F3325768B2100ED7052 /* PrinterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A7712F61DF905AE0009867F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5C3F3225768B2100ED7052 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,7 +349,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D5C3F3025768B2100ED7052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5C3F3725768B2100ED7052 /* PrinterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D5C3F3B25768B2100ED7052 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A7712F71DF905AE0009867F /* Printer */;
+			targetProxy = 2D5C3F3A25768B2100ED7052 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A77130A1DF905AE0009867F /* Debug */ = {
@@ -313,6 +393,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -339,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -376,6 +457,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -396,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -420,7 +502,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Printer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinGong.Printer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,13 +526,56 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Printer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinGong.Printer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2D5C3F3C25768B2100ED7052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PrinterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popina.PrinterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D5C3F3D25768B2100ED7052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PrinterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popina.PrinterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -471,6 +596,15 @@
 			buildConfigurations = (
 				0A77130D1DF905AE0009867F /* Debug */,
 				0A77130E1DF905AE0009867F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5C3F3E25768B2100ED7052 /* Build configuration list for PBXNativeTarget "PrinterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5C3F3C25768B2100ED7052 /* Debug */,
+				2D5C3F3D25768B2100ED7052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

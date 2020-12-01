@@ -13,7 +13,7 @@ public struct Ticket {
     public var feedLinesOnTail: UInt8 = 3
     public var feedLinesOnHead: UInt8 = 0
     
-    private var blocks = [Block]()
+    public var blocks = [Block]()
     
     public init(_ blocks: Block...) {
         self.blocks = blocks
@@ -36,5 +36,22 @@ public struct Ticket {
         }
         
         return ds
+    }
+    
+    public func attributedString() -> NSAttributedString {
+        let mutableAttributedString = NSMutableAttributedString()
+        var i = 0
+        
+        for block in blocks {
+            if i > 0 {
+                mutableAttributedString.append(NSAttributedString(string: "\n"))
+            }
+
+            mutableAttributedString.append(block.attributedString())
+            
+            i += 1
+        }
+        
+        return mutableAttributedString
     }
 }

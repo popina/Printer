@@ -31,6 +31,20 @@ public struct Text: BlockDataProvider {
         
         return result
     }
+    
+    public func attributedString() -> NSAttributedString {
+        let string = NSMutableAttributedString(string: content)
+        
+        if let attrs = attributes {
+            for attribute in attrs {
+                if let attributeString = attribute.attributeString {
+                    string.addAttributes(attributeString, range: NSMakeRange(0, string.length))
+                }
+            }
+        }
+        
+        return string
+    }
 }
 
 public extension Text {
@@ -70,6 +84,23 @@ public extension Text {
                 return [0x1D, 0x21, v.rawValue]
             case let .feed(v):
                 return ESC_POSCommand.feed(points: v).rawValue
+            }
+        }
+        
+        public var attributeString: [NSAttributedString.Key: Any]? {
+            switch self {
+            case let .alignment(v):
+                return nil //ESC_POSCommand.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
+            case .bold:
+                return [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
+            case .small:
+                return [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
+            case .light:
+                return [NSAttributedString.Key.foregroundColor: UIColor.gray]
+            case let .scale(v):
+                return nil//[0x1D, 0x21, v.rawValue]
+            case let .feed(v):
+                return nil//ESC_POSCommand.feed(points: v).rawValue
             }
         }
     }
